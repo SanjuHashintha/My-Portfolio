@@ -28,7 +28,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Mobile Backdrop - your gradient */}
       {isOpen && (
         <div
           style={{
@@ -48,7 +47,6 @@ export default function Navbar() {
           scrolled ? "bg-black/30 backdrop-blur-sm" : "bg-transparent"
         }`}
       >
-        {/* Desktop */}
         <div className="hidden lg:flex w-full">
           {navItems.map((item) => (
             <motion.div
@@ -68,7 +66,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* ✅ Hamburger: ONLY when menu is CLOSED */}
         {!isOpen && (
           <div className="lg:hidden container mx-auto px-4 py-4 flex justify-end">
             <button
@@ -83,7 +80,6 @@ export default function Navbar() {
           </div>
         )}
 
-        {/* Mobile Menu */}
         <div
           className={`lg:hidden fixed top-0 right-0 h-full w-4/5 max-w-xs z-50 transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"

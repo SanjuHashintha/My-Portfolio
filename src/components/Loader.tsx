@@ -1,4 +1,3 @@
-// src/components/Loader.tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -14,14 +13,12 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
-      {/* Top panel - pure black */}
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: "-100%" }}
         transition={{ duration: 1.0, ease: "easeInOut" }}
         className="absolute top-0 left-0 w-full h-1/2 bg-black"
       />
-      {/* Bottom panel - pure black */}
       <motion.div
         initial={{ y: 0 }}
         animate={{ y: "100%" }}

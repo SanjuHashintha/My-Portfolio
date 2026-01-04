@@ -10,7 +10,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* 🔥 Your Cyberpunk Gradient: Purple → Pink */
 body {
   background: linear-gradient(180deg, #280120,  #450063);
   background-size: 400% 400%;
@@ -28,9 +27,4 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-/* Optional: subtle glow on text for cyberpunk feel */
-* {
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
 }
