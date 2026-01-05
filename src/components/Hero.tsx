@@ -1,5 +1,5 @@
 import Image from "next/image";
-import earthImage from "../assets/earth.png";
+import sanjuImage from "../assets/sanju.jpg";
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
       <div className="relative mb-8">
         <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-cyan-400/50 shadow-2xl">
           <Image
-            src={earthImage}
+            src={sanjuImage}
             alt="Sanju"
             width={160}
             height={160}

@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,12 +5,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/#about" },
-  { name: "Skills", href: "/#skills" },
-  { name: "Projects", href: "/#projects" },
-  { name: "Experience", href: "/#experience" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Experience", href: "#experience" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -56,7 +55,18 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                onClick={closeMenu}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const target = document.querySelector(item.href);
+                  if (target) {
+                    window.scrollTo({
+                      top:
+                        target.getBoundingClientRect().top + window.scrollY - 0,
+                      behavior: "smooth",
+                    });
+                  }
+                  closeMenu();
+                }}
                 className="flex items-center justify-center h-16 text-white font-bold text-lg md:text-xl transition-all duration-300 relative group"
               >
                 <span className="transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]">
@@ -99,7 +109,20 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  onClick={closeMenu}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const target = document.querySelector(item.href);
+                    if (target) {
+                      window.scrollTo({
+                        top:
+                          target.getBoundingClientRect().top +
+                          window.scrollY -
+                          0,
+                        behavior: "smooth",
+                      });
+                    }
+                    closeMenu();
+                  }}
                   className="text-2xl text-white hover:text-cyan-300 font-medium py-2 transition-colors"
                 >
                   {item.name}
