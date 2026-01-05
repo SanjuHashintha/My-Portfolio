@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Loader from "../components/Loader";
 import Hero from "../components/Hero";
-import SpaceBackground from "../components/SpaceBackground";
+import About from "../components/About";
 
 export default function HomePage() {
   const [loaded, setLoaded] = useState(false);
@@ -15,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <About />
     </>
   );
 }

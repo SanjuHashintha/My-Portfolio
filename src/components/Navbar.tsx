@@ -57,10 +57,11 @@ export default function Navbar() {
               <Link
                 href={item.href}
                 onClick={closeMenu}
-                className="flex items-center justify-center h-16 text-white hover:text-cyan-300 font-medium relative group"
+                className="flex items-center justify-center h-16 text-white font-bold text-lg md:text-xl transition-all duration-300 relative group"
               >
-                {item.name}
-                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-cyan-400 -translate-x-1/2 group-hover:w-10 group-hover:left-0 group-hover:translate-x-0 transition-all duration-300" />
+                <span className="transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]">
+                  {item.name}
+                </span>
               </Link>
             </motion.div>
           ))}
